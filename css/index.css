@@ -4,7 +4,6 @@ body {
 
 .main {
    width: 100%;
-   height: 100vh;
    position: relative;
    overflow: hidden;
 }
@@ -22,7 +21,7 @@ body {
    width: 100%;
    height: 75px;
    padding: 0 20px;
-   max-width: var(--maxWidth);
+   max-width: 1200px;
    margin: 0 auto;
    display: flex;
    align-items: center;
@@ -41,7 +40,8 @@ body {
 
 .nav-left a {
    margin: 16px;
-   color: rgba(51, 51, 51, 0.9);
+   font-size: 16px;
+   color: #666;
    transition: color 0.2s ease;
    display: flex;
    align-items: center;
@@ -60,18 +60,6 @@ body {
    top: 16px;
    left: 50%;
    transform: translateX(-50%);
-}
-
-.main-video {
-   height: 100%;
-   position: absolute;
-   left: 50%;
-   transform: translateX(-50%);
-   top: 0;
-}
-
-.main-video video {
-   height: 100%;
 }
 
 .personal-link {
@@ -121,12 +109,13 @@ body {
 }
 
 .footer-body {
-   max-width: var(--maxWidth);
+   max-width: 1920px;
    margin: 0 auto;
 }
 
 .download-btn {
-   padding: 16px 24px;
+   padding: 14px 20px;
+   font-size: 16px;
 }
 
 .software-title {
@@ -142,13 +131,13 @@ body {
 .software-introduce {
    width: 100%;
    padding: 16px;
-   margin-top: 150px;
 }
 
 .software-introduce-item {
-   width: 1200px;
+   width: 1300px;
+   margin: 250px auto;
    display: flex;
-   margin: 0 auto 200px;
+   align-items: center;
 }
 
 .introduce-item-left .software-description {
@@ -164,6 +153,23 @@ body {
    flex: 1;
    width: 100%;
    height: 100%;
+}
+
+.software-interaction-container {
+   display: flex;
+   position: relative;
+}
+
+.software-interaction-container .interaction-img {
+   display: block;
+}
+
+.project-main-iframe {
+   width: 493px;
+   height: 345px;
+   position: absolute;
+   left: 177px;
+   top: 44px;
 }
 
 .introduce-item-left .software-title {
@@ -210,15 +216,15 @@ body {
 }
 
 .images-container {
-   width: 600px;
-   margin-right: 20px;
+   width: 540px;
+   margin-left: auto;
    display: grid;
    grid-template-columns: 1fr 1fr;
    gap: 16px;
 }
 
 .image-item {
-   width: 300px;
+   width: 260px;
    border-radius: 20px;
    overflow: hidden;
    position: relative;
@@ -235,23 +241,24 @@ body {
    left: 0;
    bottom: -50px;
    width: 100%;
-   height: 50px;
+   height: 40px;
+   font-size: 0.9rem;
    background-color: #1d1d1d;
    transition: bottom 0.2s;
    color: #fff;
    text-align: center;
-   line-height: 50px;
+   line-height: 40px;
 }
 
 .image-item:hover::after {
    bottom: 0;
 }
 
-.image-item-1 {
+.image-item-2 {
    transform: translateY(-30px);
 }
 
-.image-item-3 {
+.image-item-4 {
    transform: translateY(-30px);
 }
 
