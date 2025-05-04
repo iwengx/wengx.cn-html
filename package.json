@@ -1,15 +1,23 @@
 {
   "name": "wengxcn",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "2.0.0",
+  "description": "我的世界小肝助手官网, 企鹅群955907864",
+  "author": "WengX",
+  "type": "module",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "我的世界",
+    "小肝助手",
+    "挂机",
+    "宏脚本",
+    "免费",
+    "无感挂机",
+    "宏"
+  ],
   "license": "ISC",
   "packageManager": "pnpm@10.9.0",
   "devDependencies": {

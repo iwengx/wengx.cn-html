@@ -1,5 +1,5 @@
 <h2 align="center">
-    <p><img src="favicon.ico" width="100" alt="logo"></p>
+    <p><img src="/public/favicon.ico" width="100" alt="logo"></p>
     <a  target="_blank" href="http://wengx.cn">我的世界小肝助手官网</a>
 </h2>
 
