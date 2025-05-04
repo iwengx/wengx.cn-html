@@ -1,159 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>小肝助手 - 我的世界</title>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/src/assets/style.css" />
+    <link rel="stylesheet" href="/src/assets/index.css" />
+  </head>
 
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="./css/public.css">
-   <link rel="stylesheet" href="./css/index.css">
-   <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
-   <title>小肝助手 - 官网</title>
-</head>
+  <body class="flex items-center justify-center">
+    <main class="w-full h-full relative md:max-w-[1680px] md:h-[1050px] md:m-12 md:rounded-xl bg-white md:overflow-hidden max-md:overflow-auto">
+      <div id="wengxcn-wrapper" class="w-full h-full relative overflow-y-auto hide-scrollbar">
+        <header class="w-full h-24 sticky top-0 z-1 flex items-center justify-between max-md:justify-center px-12 max-md:px-5 max-md:position-unset">
+          <div class="flex items-center">
+            <img
+              id="wengxcn-logo"
+              src="/src/assets/images/wengxcn.png"
+              class="w-35 origin-left transition-transform duration-200 max-md:!rotate-0"
+              alt="" />
+          </div>
+        </header>
+        <div class="w-full flex md:justify-evenly max-md:flex-col max-md:px-12 md:py-12">
+          <div class="w-full md:max-w-40% max-md:mb-12">
+            <div class="program-image flex rounded-md p-1 relative">
+              <img src="/src/assets/images/program/lil-liver-script.png" loading="lazy" class="w-full rounded-md overflow-hidden" alt="" />
+              <img src="/src/assets/images/free.png" loading="lazy" class="absolute -top-2 -right-5 rotate-30" alt="" />
+            </div>
+            <div class="flex justify-between items-center mt-4 max-md:flex-col">
+              <div class="max-md:text-center">
+                <span class="text-2xl font-bold block mb-2">我的世界 - 小肝助手</span>
+                <span class="text-lg text-gray-500">一款免费的无感挂机的宏脚本软件</span>
+              </div>
+              <div class="max-md:mt-4">
+                <a
+                  id="wengxcn-download"
+                  class="inline-flex items-center justify-center whitespace-nowrap text-sm focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 py-3 px-10 rounded-sm border-2 border-b-4 border-black border-solid bg-green-600 font-bold text-white transition-transform hover:scale-105 hover:bg-green-500"
+                  target="_blank"
+                  download>
+                  <span class="drop-shadow-[2px_2px_0px_rgba(0,0,0,1)] text-[16px]"> 立刻下载 </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:max-w-40% max-md:mb-12">
+            <div class="w-full h-full p-2 flex items-center">
+              <div>
+                <span
+                  class="bg-[#f7d51d] shadow-[0_0.5em_#f7d51d,0_-0.5em_#f7d51d,0.5em_0_#f7d51d,-0.5em_0_#f7d51d] font-bold text-base block text-center w-[150px] mb-5">
+                  简 介
+                </span>
+                <span class="text-xl tracking-wide text-slate-800">
+                  这是一款集成自动钓鱼、自动发消息和鼠标操作的多功能宏脚本软件。启动脚本后，它不会影响你电脑上的其他操作，实现完全隔离，你可以一边打其他游戏，一边挂机我的世界。
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full flex md:justify-evenly max-md:flex-col max-md:px-12 md:py-12">
+          <div class="w-full md:max-w-40% max-md:mb-12">
+            <div class="w-full h-full p-2 flex items-center justify-center">
+              <div>
+                <span
+                  class="bg-[#f7d51d] shadow-[0_0.5em_#f7d51d,0_-0.5em_#f7d51d,0.5em_0_#f7d51d,-0.5em_0_#f7d51d] font-bold text-base block text-center w-[150px] mb-5">
+                  逻 辑
+                </span>
+                <span class="text-xl tracking-wide text-slate-800">
+                  小肝助手会获取你当前的游戏进程，并向该进程发送宏命令，这样就实现了进程间的脚本隔离，从而不影响到其他进程的正常运行。小肝助手不会修改你的游戏数据，也不会修改文件等，它只是在宏脚本的基础上扩展了一些辅助功能。
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:max-w-40% max-md:mb-12">
+            <div class="flex flex-wrap justify-center">
+              <div class="w-[280px] relative rounded-lg overflow-hidden m-3 group">
+                <img
+                  src="/src/assets/images/program/fishing-demonstration.gif"
+                  alt="fishing"
+                  loading="lazy"
+                  class="w-full flex opacity-60 group-hover:opacity-100 transition-opacity duration-200" />
+                <div
+                  class="w-full h-[40px] leading-[40px] color-white text-center absolute bottom-0 bg-[#333c] group-hover:-bottom-10 transition-all duration-200">
+                  全自动钓鱼
+                </div>
+              </div>
+              <div class="w-[280px] relative rounded-lg overflow-hidden m-3 group">
+                <img
+                  src="/src/assets/images/program/hide-program.gif"
+                  alt="fishing"
+                  loading="lazy"
+                  class="w-full flex opacity-60 group-hover:opacity-100 transition-opacity duration-200" />
+                <div
+                  class="w-full h-[40px] leading-[40px] color-white text-center absolute bottom-0 bg-[#333c] group-hover:-bottom-10 transition-all duration-200">
+                  隐藏到后台挂机
+                </div>
+              </div>
+              <div class="w-[280px] relative rounded-lg overflow-hidden m-3 group">
+                <img
+                  src="/src/assets/images/program/click-demonstration.gif"
+                  alt="fishing"
+                  loading="lazy"
+                  class="w-full flex opacity-60 group-hover:opacity-100 transition-opacity duration-200" />
+                <div
+                  class="w-full h-[40px] leading-[40px] color-white text-center absolute bottom-0 bg-[#333c] group-hover:-bottom-10 transition-all duration-200">
+                  鼠标连点
+                </div>
+              </div>
+              <div class="w-[280px] relative rounded-lg overflow-hidden m-3 group">
+                <img
+                  src="/src/assets/images/program/send-message.gif"
+                  alt="fishing"
+                  loading="lazy"
+                  class="w-full flex opacity-60 group-hover:opacity-100 transition-opacity duration-200" />
+                <div
+                  class="w-full h-[40px] leading-[40px] color-white text-center absolute bottom-0 bg-[#333c] group-hover:-bottom-10 transition-all duration-200">
+                  自动发消息
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="w-full pt-12 md:pt-24">
+          <div class="flex flex-col items-center justify-center text-slate-800 max-md:px-12">
+            <span
+              class="bg-[#f7d51d] shadow-[0_0.5em_#f7d51d,0_-0.5em_#f7d51d,0.5em_0_#f7d51d,-0.5em_0_#f7d51d] font-bold text-sm block text-center w-[150px] mb-5">
+              关注 / 反馈
+            </span>
+            <span class="text-lg block"> 欢迎加入我们的企鹅群一起交流</span>
+            <span class="text-lg block"> 当然，如果可以的话最好给我的 GitHub 点一个 Star，这会使我非常高兴！</span>
 
-<body>
-   <div class="main">
-      <div id="main-nav" class="main-nav">
-         <div class="main-nav-container">
-            <div class="nav-left">
-               <a href="/">首页</a>
-               <a href="./questions.html">疑问解答</a>
-               <a target="_blank" href="https://github.com/iwengx/Minecraft-Lil-liver-helper">GitHub</a>
+            <div class="flex items-center flex-wrap mt-1 max-md:justify-center">
+              <a href="https://qm.qq.com/q/VGJh7f7GoO" target="_blank" class="flex items-center mr-5 rounded my-buttons">
+                <img src="/src/assets/icon/qq.svg" alt="qq" class="mr-1" />
+                <span class="text-slate-800">955907864</span>
+              </a>
+              <a href="https://qm.qq.com/q/ahkpqvgsHS" target="_blank" class="flex items-center mr-5 rounded my-buttons">
+                <img src="/src/assets/icon/qq.svg" alt="qq" class="mr-1" />
+                <span class="text-slate-800">724761073</span>
+              </a>
+              <a href="https://github.com/iwengx/Minecraft-Lil-liver-helper" target="_blank" class="flex items-center mr-5 rounded my-buttons">
+                <img src="/src/assets/icon/github.svg" alt="github" class="mr-1" />
+                <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/iwengx/Minecraft-Lil-liver-helper" />
+              </a>
+              <a href="https://github.com/iwengx/Minecraft-Lil-liver-helper/releases" target="_blank" class="flex items-center rounded my-buttons">
+                <img src="/src/assets/icon/github.svg" alt="github" class="mr-1" />
+                <img
+                  alt="GitHub Release"
+                  src="https://img.shields.io/github/v/release/iwengx/Minecraft-Lil-liver-helper?style=social&label=%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97" />
+              </a>
             </div>
-            <div class="nav-right">
-               <div class="minecraft-btn1 download-btn">下载 DOWNLOAD</div>
-            </div>
-         </div>
+          </div>
+          <div class="w-full h-[150px] footer-image"></div>
+        </footer>
       </div>
-
-      <div class="software-introduce">
-         <div class="software-introduce-item">
-            <div class="introduce-item-left">
-               <div class="flex-column-start">
-                  <h1 class="software-title">我的世界<span class="light-text">小肝助手</span></h1>
-                  <h1 class="software-title">Minecraft Lil Liver Helper</h1>
-                  <h2 class="software-description">一款免费的无感挂机的宏脚本软件</h2>
-                  <div class="minecraft-btn2 download-btn">免费下载</div>
-               </div>
-            </div>
-            <div class="introduce-item-right">
-               <div class="images-container" style="text-align: right;">
-                  <div class="image-item image-item-1" data-text="钓鱼脚本">
-                     <img src="./img/lil-liver-helper/diaoyuDemonstration.gif" alt="">
-                  </div>
-                  <div class="image-item image-item-2" data-text="隐藏到后台挂机">
-                     <img src="./img/lil-liver-helper/HideProgram.gif" alt="">
-                  </div>
-                  <div class="image-item image-item-3" data-text="鼠标连点">
-                     <img src="./img/lil-liver-helper/liandianDemonstration.gif" alt="">
-                  </div>
-                  <div class="image-item image-item-4" data-text="自动发消息">
-                     <img src="./img/lil-liver-helper/SendInfo.gif" alt="">
-                  </div>
-               </div>
-            </div>
-         </div>
-
-         <div class="software-introduce-item">
-            <div class="introduce-item-left">
-               <div class="software-interaction-container">
-                  <div class="black-border">
-                     <img class="interaction-img" src="./img/lil-liver-helper/小肝助手首页.png" alt="">
-                  </div>
-                  <iframe class="project-main-iframe" src="./project-main/index.html" frameborder="0"></iframe>
-               </div>
-            </div>
-            <div class="introduce-item-right" style="margin: auto;">
-               <div class="software-information-container">
-                  <div class="information-item info-main">无感挂机</div>
-                  <div class="information-item info-secondary">启动脚本后，它不会影响你电脑上的其他操作，实现完全隔离，你可以一边打其他游戏，一边挂机我的世界。</div>
-               </div>
-            </div>
-         </div>
-
-         <div class="software-introduce-item data-container">
-            <div class="data-card flex-center">
-               <p class="data-value">999</p>
-               <p class="data-label">小肝助手今日访问量</p>
-            </div>
-            <div class="data-card flex-center">
-               <p class="data-value">999</p>
-               <p class="data-label">官网今日访问量</p>
-            </div>
-            <div class="data-card flex-center">
-               <p class="data-value">WengX</p>
-               <p class="data-label">赞助榜一</p>
-            </div>
-         </div>
+      <div class="w-[68px] absolute top-18 right-0 hover:scale-110 transition-all duration-200 max-md:hidden">
+        <img src="/src/assets/images/coolie-fear.png" alt="steve" loading="lazy" class="w-full flex" />
       </div>
-   </div>
-   <div class="personal-link">
-      <div class="personal-link-title"><span>关注 / 反馈 小肝助手</span></div>
-      <div class="personal-link-group">
-         <a href="https://qm.qq.com/cgi-bin/qm/qr?k=s1az9v8GGIzxJvouBrE6m_S3eMjo-R91&jump_from=webapi&authKey=ufbMWJgjf57ArPcN58PcuFJsZPBRdV2AldfqaJ+cWnrNg5WT39Zn667WG/AGN7x0"
-            target="_blank">
-            <svg t="1710598606107" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
-               p-id="1470" width="32" height="32" data-spm-anchor-id="a313x.search_index.0.i3.1d7f3a81zEnuna">
-               <path
-                  d="M512.5681755 3.6315227c-280.7266725 0-508.30211299 227.57427541-508.30211299 508.302113s227.57427541 508.30211299 508.30211299 508.30211299 508.30094791-227.57427541 508.30094791-508.30211299S793.29484914 3.6315227 512.5681755 3.6315227zM444.32651491 712.69303069l-0.07451534 0.06287246c-8.02315719 6.83208363-13.30090667 13.75614635-16.70996309 20.28318378-5.73881003-0.01047893-11.3623552-0.31785301-16.97076451-0.79404942-49.61876195 27.72186567-135.01747541 18.49715598-156.10285967-0.3620955-16.31177387-14.56067357-15.46300302-33.57361266 3.77115193-49.95291478 5.09728427-4.29857678 14.07283427-8.03247104 24.43855303-11.18538296-16.90090723-18.43544747-29.73958827-40.17982237-37.41578581-63.94890582-4.47904313 7.10802091-8.51216157 13.63505949-11.18421788 18.3399754-10.38201856 18.31086877-23.00414179 20.08176071-30.20064882 0.26778738-8.00336441-21.96442567-5.26959957-55.56947399 9.46804736-93.55343645 9.11410176-23.46869533 24.36287374-43.37697678 35.48654933-56.24360163-4.10996167-7.20000114-6.45834411-14.73066098-6.45834411-22.52910934 0-16.28383005 9.57749134-31.47089579 25.99987314-44.52380672 8.35731001-84.35783339 76.52911331-150.14050475 159.45253547-150.14050474 44.08719701 0 84.01436672 18.61358478 112.99250631 48.72807651-12.68965149 7.16972942-24.60970439 15.95200626-35.47374137 26.25834667-30.86429753 29.27736377-50.92044459 68.49082027-57.02833607 111.17038478-22.21824227 20.36119211-27.11992434 40.86326386-27.11992434 54.98616263 0 6.43040142 1.03855104 12.84101006 3.09818937 19.17244644-13.73751751 17.44346795-24.05084274 34.92768768-30.72458183 52.11151815-16.30129493 42.01475072-19.71733618 80.41553123-9.62522681 108.11178098 8.10815033 22.32186425 22.21125632 26.76481479 29.89676885 27.42497052 11.33091954 0.96985771 20.26455495-4.55937934 26.79857949-11.2703761 2.68370034 4.74683051 5.57697365 9.38771115 8.67167004 13.91216184C447.48873955 710.20027563 445.83311246 711.42278485 444.32651491 712.69303069zM821.80610617 656.69509575c-6.31862955 17.34217501-17.36080384 15.79016989-26.45394774-0.23518777-2.34023253-4.12160455-5.87037582-9.83945785-9.79637816-16.06494321-6.68538197 20.71164473-17.82186439 39.63493262-32.5152677 55.72781852 9.48434717 2.84553671 17.69728455 6.18357077 22.31371434 10.0862885 16.8322139 14.34760761 17.5901696 31.00284814 3.31591226 43.75653717-18.48434802 16.51901781-93.41139171 24.61319737-136.84774799 0.27477333-5.31850013 0.46571747-10.7045285 0.74049195-16.15808625 0.74049195-5.11358407 0-10.12005205-0.27477333-15.11371435-0.69857735-43.46429895 24.28253753-118.26909184 16.20232989-136.73946795-0.31668793-14.28822926-12.75368789-13.54424434-29.40892843 3.30310542-43.75653717 4.46507122-3.76532992 12.32755598-7.03699968 21.4067291-9.79754326-14.80401123-16.14877241-26.04993763-35.19547506-32.77490517-56.01656376-3.92367445 6.22548537-7.45614563 11.94333867-9.79637817 16.06494321-9.09430898 16.03932843-20.15045405 17.59133355-26.45394773 0.23518777-7.01022094-19.23997582-4.61526585-48.67684807 8.2932736-81.94890752 7.98357163-20.55679317 21.34036366-37.99676928 31.08434944-49.26714538-3.60000057-6.30698667-5.65730987-12.90388253-5.65730987-19.73480107 0-14.26377842 8.38990962-27.56701411 22.77477604-39.00039168 7.31992291-73.89431353 67.03661625-131.51644103 139.67349191-131.51644103 72.61126087 0 132.34192611 57.63609827 139.66184903 131.51644103 14.37089337 11.43337757 22.77477603 24.73661213 22.77477604 39.00039168 0 6.83091854-2.04333739 13.4278144-5.65730987 19.73480107 9.74398578 11.28434802 23.11474973 28.70918713 31.08434944 49.26714538l-0.01397191 0C826.42137202 608.01824882 828.81632711 637.45511993 821.80610617 656.69509575z"
-                  p-id="1471" data-spm-anchor-id="a313x.search_index.0.i4.1d7f3a81zEnuna" class="selected"
-                  fill="#ffffff"></path>
-            </svg>
-            955907864
-         </a>
-         <a href="https://qm.qq.com/cgi-bin/qm/qr?k=uo0Z77KnRmdcVV0a4nmSTCyLQiaJnLnj&jump_from=webapi&authKey=Ebkg1g8Njt8dAJYtp9GBWT4OMmgk7bzAL9oVyJU5uw8CwDemLdYiz4Ez5Wr1AaRn"
-            target="_blank">
-            <svg t="1710598606107" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
-               p-id="1470" width="32" height="32" data-spm-anchor-id="a313x.search_index.0.i3.1d7f3a81zEnuna">
-               <path
-                  d="M512.5681755 3.6315227c-280.7266725 0-508.30211299 227.57427541-508.30211299 508.302113s227.57427541 508.30211299 508.30211299 508.30211299 508.30094791-227.57427541 508.30094791-508.30211299S793.29484914 3.6315227 512.5681755 3.6315227zM444.32651491 712.69303069l-0.07451534 0.06287246c-8.02315719 6.83208363-13.30090667 13.75614635-16.70996309 20.28318378-5.73881003-0.01047893-11.3623552-0.31785301-16.97076451-0.79404942-49.61876195 27.72186567-135.01747541 18.49715598-156.10285967-0.3620955-16.31177387-14.56067357-15.46300302-33.57361266 3.77115193-49.95291478 5.09728427-4.29857678 14.07283427-8.03247104 24.43855303-11.18538296-16.90090723-18.43544747-29.73958827-40.17982237-37.41578581-63.94890582-4.47904313 7.10802091-8.51216157 13.63505949-11.18421788 18.3399754-10.38201856 18.31086877-23.00414179 20.08176071-30.20064882 0.26778738-8.00336441-21.96442567-5.26959957-55.56947399 9.46804736-93.55343645 9.11410176-23.46869533 24.36287374-43.37697678 35.48654933-56.24360163-4.10996167-7.20000114-6.45834411-14.73066098-6.45834411-22.52910934 0-16.28383005 9.57749134-31.47089579 25.99987314-44.52380672 8.35731001-84.35783339 76.52911331-150.14050475 159.45253547-150.14050474 44.08719701 0 84.01436672 18.61358478 112.99250631 48.72807651-12.68965149 7.16972942-24.60970439 15.95200626-35.47374137 26.25834667-30.86429753 29.27736377-50.92044459 68.49082027-57.02833607 111.17038478-22.21824227 20.36119211-27.11992434 40.86326386-27.11992434 54.98616263 0 6.43040142 1.03855104 12.84101006 3.09818937 19.17244644-13.73751751 17.44346795-24.05084274 34.92768768-30.72458183 52.11151815-16.30129493 42.01475072-19.71733618 80.41553123-9.62522681 108.11178098 8.10815033 22.32186425 22.21125632 26.76481479 29.89676885 27.42497052 11.33091954 0.96985771 20.26455495-4.55937934 26.79857949-11.2703761 2.68370034 4.74683051 5.57697365 9.38771115 8.67167004 13.91216184C447.48873955 710.20027563 445.83311246 711.42278485 444.32651491 712.69303069zM821.80610617 656.69509575c-6.31862955 17.34217501-17.36080384 15.79016989-26.45394774-0.23518777-2.34023253-4.12160455-5.87037582-9.83945785-9.79637816-16.06494321-6.68538197 20.71164473-17.82186439 39.63493262-32.5152677 55.72781852 9.48434717 2.84553671 17.69728455 6.18357077 22.31371434 10.0862885 16.8322139 14.34760761 17.5901696 31.00284814 3.31591226 43.75653717-18.48434802 16.51901781-93.41139171 24.61319737-136.84774799 0.27477333-5.31850013 0.46571747-10.7045285 0.74049195-16.15808625 0.74049195-5.11358407 0-10.12005205-0.27477333-15.11371435-0.69857735-43.46429895 24.28253753-118.26909184 16.20232989-136.73946795-0.31668793-14.28822926-12.75368789-13.54424434-29.40892843 3.30310542-43.75653717 4.46507122-3.76532992 12.32755598-7.03699968 21.4067291-9.79754326-14.80401123-16.14877241-26.04993763-35.19547506-32.77490517-56.01656376-3.92367445 6.22548537-7.45614563 11.94333867-9.79637817 16.06494321-9.09430898 16.03932843-20.15045405 17.59133355-26.45394773 0.23518777-7.01022094-19.23997582-4.61526585-48.67684807 8.2932736-81.94890752 7.98357163-20.55679317 21.34036366-37.99676928 31.08434944-49.26714538-3.60000057-6.30698667-5.65730987-12.90388253-5.65730987-19.73480107 0-14.26377842 8.38990962-27.56701411 22.77477604-39.00039168 7.31992291-73.89431353 67.03661625-131.51644103 139.67349191-131.51644103 72.61126087 0 132.34192611 57.63609827 139.66184903 131.51644103 14.37089337 11.43337757 22.77477603 24.73661213 22.77477604 39.00039168 0 6.83091854-2.04333739 13.4278144-5.65730987 19.73480107 9.74398578 11.28434802 23.11474973 28.70918713 31.08434944 49.26714538l-0.01397191 0C826.42137202 608.01824882 828.81632711 637.45511993 821.80610617 656.69509575z"
-                  p-id="1471" data-spm-anchor-id="a313x.search_index.0.i4.1d7f3a81zEnuna" class="selected"
-                  fill="#ffffff"></path>
-            </svg>
-            724761073
-         </a>
+    </main>
 
-         <a href="https://github.com/iwengx/Minecraft-Lil-liver-helper" target="_blank">
-            <svg t="1710599474348" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
-               p-id="18444" id="mx_n_1710599474349" width="32" height="32">
-               <path d="M512 512m-512 0a512 512 0 1 0 1024 0 512 512 0 1 0-1024 0Z" fill="#ffffff" p-id="18445"
-                  data-spm-anchor-id="a313x.search_index.0.i29.1d7f3a81zEnuna" class="selected"></path>
-               <path
-                  d="M411.306667 831.146667c3.413333-5.12 6.826667-10.24 6.826666-11.946667v-69.973333c-105.813333 22.186667-128-44.373333-128-44.373334-17.066667-44.373333-42.666667-56.32-42.666666-56.32-34.133333-23.893333 3.413333-23.893333 3.413333-23.893333 37.546667 3.413333 58.026667 39.253333 58.026667 39.253333 34.133333 58.026667 88.746667 40.96 110.933333 32.426667 3.413333-23.893333 13.653333-40.96 23.893333-51.2-85.333333-10.24-174.08-42.666667-174.08-187.733333 0-40.96 15.36-75.093333 39.253334-102.4-3.413333-10.24-17.066667-47.786667 3.413333-100.693334 0 0 32.426667-10.24 104.106667 39.253334 30.72-8.533333 63.146667-11.946667 95.573333-11.946667 32.426667 0 64.853333 5.12 95.573333 11.946667 73.386667-49.493333 104.106667-39.253333 104.106667-39.253334 20.48 52.906667 8.533333 90.453333 3.413333 100.693334 23.893333 27.306667 39.253333 59.733333 39.253334 102.4 0 145.066667-88.746667 177.493333-174.08 187.733333 13.653333 11.946667 25.6 34.133333 25.6 69.973333v104.106667c0 3.413333 1.706667 6.826667 6.826666 11.946667 5.12 6.826667 3.413333 18.773333-3.413333 23.893333-3.413333 1.706667-6.826667 3.413333-10.24 3.413333h-174.08c-10.24 0-17.066667-6.826667-17.066667-17.066666 0-5.12 1.706667-8.533333 3.413334-10.24z"
-                  fill="#111" p-id="18446" data-spm-anchor-id="a313x.search_index.0.i28.1d7f3a81zEnuna"
-                  class="selected"></path>
-            </svg>
-            GitHub
-         </a>
-      </div>
-   </div>
-
-   <div class="footer">
-      <div class="footer-body">
-         <div>
-            <p style="margin-bottom: 8px;">友链</p>
-            <div><a href="">xxxxxxxx</a></div>
-            <div><a href="">xxxxxxxx</a></div>
-            <div><a href="">xxxxxxxx</a></div>
-            <div><a href="">xxxxxxxx</a></div>
-            <div><a href="">xxxxxxxx</a></div>
-         </div>
-      </div>
-   </div>
-</body>
-
-<script src="./js/index.js"></script>
-<script>
-   const mainNavEl = document.querySelector('#main-nav')
-
-   window.addEventListener('scroll', (e) => {
-      if (e.target.scrollingElement.scrollTop !== 0) {
-         mainNavEl.classList.add('nav-background')
-      } else {
-         mainNavEl.classList.remove('nav-background')
-      }
-   })
-
-</script>
-
+    <script src="/src/scripts/main.js" type="module"></script>
+  </body>
 </html>

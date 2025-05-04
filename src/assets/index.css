@@ -1,0 +1,19 @@
+.program-image {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+
+.my-buttons {
+  padding: 5px;
+  transition: box-shadow 0.1s ease-in-out, background-color 0.1s ease-in-out;
+}
+
+.my-buttons:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: #f7d51d;
+}
+
+.footer-image {
+  background-image: url('/src/assets/images/trans-bottom-darkwool.png');
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
