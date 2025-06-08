@@ -4,13 +4,23 @@
 </h2>
 
 <p align="center">
-    :punch: 该脚本软件完全免费，禁止拿去用于商业用途！
+    本站使用原生 HTML + UnoCSS 开发，Vite 进行构建。企鹅群 955907864
 </p>
 
-<p align="center">
-    QQ群：955907864
-</p>
+## Project setup
 
-<p align="center">
-    :book: 官网源码仓库
-</p>
+克隆项目
+```
+git clone https://github.com/iwengx/wengx.cn-html.git
+cd wengx.cn-html
+```
+
+安装依赖
+```
+pnpm install
+```
+
+启动项目
+```
+pnpm dev
+```
