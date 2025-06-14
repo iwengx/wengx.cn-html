@@ -20,5 +20,19 @@ export default defineConfig({
 ${selector}::-webkit-scrollbar{display: none;}`
       },
     ],
+
+    [
+      /^border-pixel-(\w+)$/,
+      ([, c]) => ({
+        'border-style': 'solid',
+        'border-image': `linear-gradient(45deg, var(--un-color-${c}-600) 25%, transparent 25%, transparent 75%, var(--un-color-${c}-600) 75%), linear-gradient(45deg, var(--un-color-${c}-600) 25%, transparent 25%, transparent 75%, var(--un-color-${c}-600) 75%)`,
+        'border-image-size': '4px 4px',
+        'border-image-repeat': 'repeat',
+      }),
+    ],
+    ['text-minecraft', { 'text-shadow': '2px 2px 0px rgba(0,0,0,0.8)' }],
+    ['text-minecraft-sm', { 'text-shadow': '1px 1px 0px rgba(0,0,0,0.8)' }],
+    ['shadow-minecraft', { 'box-shadow': 'inset -4px -4px 0px rgba(0,0,0,0.3), inset 4px 4px 0px rgba(255,255,255,0.1)' }],
+    ['shadow-minecraft-sm', { 'box-shadow': 'inset -2px -2px 0px rgba(0,0,0,0.5), inset 2px 2px 0px rgba(255,255,255,0.1)' }],
   ],
 })

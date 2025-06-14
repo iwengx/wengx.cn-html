@@ -1,5 +1,3 @@
-import 'virtual:uno.css'
-
 const wrapperEl = document.getElementById('wengxcn-wrapper')
 const logoEl = document.getElementById('wengxcn-logo')
 
