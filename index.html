@@ -9,168 +9,179 @@
     <script src="/src/scripts/common.js" type="module"></script>
   </head>
 
-  <body class="flex items-center justify-center overflow-hidden md:px-12 md:py-8">
-    <main class="h-full relative md:aspect-video md:max-w-[1680px] md:max-h-[1050px] md:rounded-xl bg-white overflow-hidden">
-      <div id="wengxcn-wrapper" class="w-full h-full relative overflow-y-auto hide-scrollbar">
-        <header class="w-full h-24 sticky top-0 z-1 flex items-center justify-between max-md:justify-center px-12 max-md:px-5 max-md:position-unset">
-          <div class="flex items-center">
-            <img
-              id="wengxcn-logo"
-              src="/src/assets/images/wengxcn.png"
-              class="w-35 origin-left transition-transform duration-200 max-md:!rotate-0"
-              alt="" />
-          </div>
-        </header>
-        <div class="w-full flex md:justify-evenly max-md:flex-col max-md:px-12 md:py-12">
-          <div class="w-full md:max-w-40% max-md:mb-12">
-            <div class="flex rounded-md p-1 relative shadow-[0_1px_4px_rgba(0,0,0,0.16),0_0_0_3px_rgb(51,51,51)]">
+  <body class="overflow-hidden bg-cover bg-center bg-no-repeat bg-[url(/src/assets/images/wallhaven-z8vk1w.png)] bg-[#888282]">
+    <div class="h-full relative flex items-center justify-center md:mx-12 md:my-8 perspective-[5000px]">
+      <main id="home-main" class="main-container relative z-10 bg-[url(/src/assets/images/bg-wool-light.png)] bg-cover">
+        <div id="wengxcn-wrapper" class="w-full h-full relative overflow-y-auto hide-scrollbar">
+          <header
+            class="w-full h-24 sticky top-0 z-1 flex items-center justify-between max-md:justify-center px-12 max-md:px-5 max-md:position-unset">
+            <div class="flex items-center">
               <img
-                src="/src/assets/images/program/lil-liver-script.png"
-                width="960"
-                height="600"
-                loading="lazy"
-                class="w-full h-full flex rounded-md overflow-hidden"
+                id="wengxcn-logo"
+                src="/src/assets/images/wengxcn.png"
+                class="w-35 origin-left transition-transform duration-200 max-md:!rotate-0"
                 alt="" />
-              <img src="/src/assets/images/free.png" loading="lazy" class="absolute -top-2 -right-5 rotate-30" alt="" />
             </div>
-            <div class="flex justify-between items-center mt-4 max-md:flex-col">
-              <div class="max-md:text-center">
-                <span class="text-2xl font-bold block mb-2">我的世界 - 小肝助手</span>
-                <span class="text-lg text-gray-500">一款免费的无感挂机的宏脚本软件</span>
+          </header>
+          <div class="w-full flex md:justify-evenly max-md:flex-col max-md:px-12 md:py-12">
+            <div class="w-full md:max-w-40% max-md:mb-12">
+              <div class="flex rounded-md p-1 relative shadow-[0_1px_4px_rgba(0,0,0,0.16),0_0_0_3px_rgb(51,51,51)]">
+                <img
+                  src="/src/assets/images/program/lil-liver-script.png"
+                  width="960"
+                  height="600"
+                  loading="lazy"
+                  class="w-full h-full flex rounded-md overflow-hidden"
+                  alt="" />
+                <img src="/src/assets/images/free.png" loading="lazy" class="absolute -top-2 -right-5 rotate-30" alt="" />
               </div>
-              <div class="max-md:mt-4">
-                <a
-                  id="wengxcn-download"
-                  class="inline-flex items-center justify-center whitespace-nowrap text-sm focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 py-3 px-10 rounded-sm border-2 border-b-4 border-black border-solid bg-green-600 font-bold text-white transition-transform hover:scale-105 hover:bg-green-500"
-                  target="_blank"
-                  download>
-                  <span class="drop-shadow-[2px_2px_0px_rgba(0,0,0,1)] text-[16px]"> 立刻下载 </span>
+              <div class="flex justify-between items-center mt-4 max-md:flex-col">
+                <div class="max-md:text-center">
+                  <span class="text-2xl font-bold block mb-2">我的世界 - 小肝助手</span>
+                  <span class="text-lg text-gray-500">一款免费的无感挂机的宏脚本软件</span>
+                </div>
+                <div class="max-md:mt-4">
+                  <a
+                    id="wengxcn-download"
+                    class="inline-flex items-center justify-center whitespace-nowrap text-sm focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 py-3 px-10 rounded-sm border-2 border-b-4 border-black border-solid bg-green-600 font-bold text-white transition-transform hover:scale-105 hover:bg-green-500"
+                    target="_blank"
+                    download>
+                    <span class="drop-shadow-[2px_2px_0px_rgba(0,0,0,1)] text-[16px]"> 立刻下载 </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:max-w-40% max-md:mb-12">
+              <div class="w-full h-full p-2 flex items-center">
+                <div>
+                  <span
+                    class="bg-[#f7d51d] shadow-[0_0.5em_#f7d51d,0_-0.5em_#f7d51d,0.5em_0_#f7d51d,-0.5em_0_#f7d51d] font-bold text-base block text-center w-[150px] mb-5">
+                    简 介
+                  </span>
+                  <span class="text-xl tracking-wide text-slate-800">
+                    这是一款集成自动钓鱼、自动发消息和鼠标操作的多功能宏脚本软件。启动脚本后，它不会影响你电脑上的其他操作，实现完全隔离，你可以一边打其他游戏，一边挂机我的世界。
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full flex md:justify-evenly max-md:flex-col max-md:px-12 md:py-12">
+            <div class="w-full md:max-w-40% max-md:mb-12">
+              <div class="w-full h-full p-2 flex items-center justify-center">
+                <div>
+                  <span
+                    class="bg-[#f7d51d] shadow-[0_0.5em_#f7d51d,0_-0.5em_#f7d51d,0.5em_0_#f7d51d,-0.5em_0_#f7d51d] font-bold text-base block text-center w-[150px] mb-5">
+                    逻 辑
+                  </span>
+                  <span class="text-xl tracking-wide text-slate-800">
+                    小肝助手会获取你当前的游戏进程，并向该进程发送宏命令，这样就实现了进程间的脚本隔离，从而不影响到其他进程的正常运行。小肝助手不会修改你的游戏数据，也不会修改文件等，它只是在宏脚本的基础上扩展了一些辅助功能。
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:max-w-40% max-md:mb-12">
+              <div class="flex flex-wrap justify-center">
+                <div class="w-[280px] relative rounded-lg overflow-hidden m-3 group">
+                  <img
+                    src="/src/assets/images/program/fishing-demonstration.gif"
+                    width="409"
+                    height="222"
+                    alt="fishing"
+                    loading="lazy"
+                    class="w-full h-full flex opacity-60 group-hover:opacity-100 transition-opacity duration-200" />
+                  <div
+                    class="w-full h-[40px] leading-[40px] color-white text-center absolute bottom-0 bg-[#333c] group-hover:-bottom-10 transition-all duration-200">
+                    全自动钓鱼
+                  </div>
+                </div>
+                <div class="w-[280px] relative rounded-lg overflow-hidden m-3 group">
+                  <img
+                    src="/src/assets/images/program/hide-program.gif"
+                    width="409"
+                    height="222"
+                    alt="fishing"
+                    loading="lazy"
+                    class="w-full h-full flex opacity-60 group-hover:opacity-100 transition-opacity duration-200" />
+                  <div
+                    class="w-full h-[40px] leading-[40px] color-white text-center absolute bottom-0 bg-[#333c] group-hover:-bottom-10 transition-all duration-200">
+                    隐藏到后台挂机
+                  </div>
+                </div>
+                <div class="w-[280px] relative rounded-lg overflow-hidden m-3 group">
+                  <img
+                    src="/src/assets/images/program/click-demonstration.gif"
+                    width="409"
+                    height="222"
+                    alt="fishing"
+                    loading="lazy"
+                    class="w-full h-full flex opacity-60 group-hover:opacity-100 transition-opacity duration-200" />
+                  <div
+                    class="w-full h-[40px] leading-[40px] color-white text-center absolute bottom-0 bg-[#333c] group-hover:-bottom-10 transition-all duration-200">
+                    鼠标连点
+                  </div>
+                </div>
+                <div class="w-[280px] relative rounded-lg overflow-hidden m-3 group">
+                  <img
+                    src="/src/assets/images/program/send-message.gif"
+                    width="409"
+                    height="222"
+                    alt="fishing"
+                    loading="lazy"
+                    class="w-full h-full flex opacity-60 group-hover:opacity-100 transition-opacity duration-200" />
+                  <div
+                    class="w-full h-[40px] leading-[40px] color-white text-center absolute bottom-0 bg-[#333c] group-hover:-bottom-10 transition-all duration-200">
+                    自动发消息
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer class="w-full pt-12 md:pt-24">
+            <div class="flex flex-col items-center justify-center text-slate-800 max-md:px-12">
+              <span
+                class="bg-[#f7d51d] shadow-[0_0.5em_#f7d51d,0_-0.5em_#f7d51d,0.5em_0_#f7d51d,-0.5em_0_#f7d51d] font-bold text-sm block text-center w-[150px] mb-5">
+                关注 / 反馈
+              </span>
+              <span class="text-lg block"> 欢迎加入我们的企鹅群一起交流</span>
+              <span class="text-lg block"> 当然，如果可以的话最好给我的 GitHub 点一个 Star，这会使我非常高兴！</span>
+
+              <div class="flex items-center flex-wrap mt-1 max-md:justify-center">
+                <a href="https://qm.qq.com/q/VGJh7f7GoO" target="_blank" class="btn-link">
+                  <img src="/src/assets/icon/qq.svg" alt="qq" class="mr-1" />
+                  <span class="text-slate-800">955907864</span>
+                </a>
+                <a href="https://qm.qq.com/q/ahkpqvgsHS" target="_blank" class="btn-link">
+                  <img src="/src/assets/icon/qq.svg" alt="qq" class="mr-1" />
+                  <span class="text-slate-800">724761073</span>
+                </a>
+                <a href="https://github.com/iwengx/Minecraft-Lil-liver-helper" target="_blank" class="btn-link">
+                  <img src="/src/assets/icon/github.svg" alt="github" class="mr-1" />
+                  <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/iwengx/Minecraft-Lil-liver-helper" />
+                </a>
+                <a href="https://github.com/iwengx/Minecraft-Lil-liver-helper/releases" target="_blank" class="btn-link">
+                  <img src="/src/assets/icon/github.svg" alt="github" class="mr-1" />
+                  <img
+                    alt="GitHub Release"
+                    src="https://img.shields.io/github/v/release/iwengx/Minecraft-Lil-liver-helper?style=social&label=%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97" />
                 </a>
               </div>
             </div>
-          </div>
-          <div class="w-full md:max-w-40% max-md:mb-12">
-            <div class="w-full h-full p-2 flex items-center">
-              <div>
-                <span
-                  class="bg-[#f7d51d] shadow-[0_0.5em_#f7d51d,0_-0.5em_#f7d51d,0.5em_0_#f7d51d,-0.5em_0_#f7d51d] font-bold text-base block text-center w-[150px] mb-5">
-                  简 介
-                </span>
-                <span class="text-xl tracking-wide text-slate-800">
-                  这是一款集成自动钓鱼、自动发消息和鼠标操作的多功能宏脚本软件。启动脚本后，它不会影响你电脑上的其他操作，实现完全隔离，你可以一边打其他游戏，一边挂机我的世界。
-                </span>
-              </div>
-            </div>
-          </div>
+            <div class="w-full h-[150px] bg-bottom bg-repeat-x bg-[url(/src/assets/images/trans-bottom-darkwool.png)]"></div>
+          </footer>
         </div>
-        <div class="w-full flex md:justify-evenly max-md:flex-col max-md:px-12 md:py-12">
-          <div class="w-full md:max-w-40% max-md:mb-12">
-            <div class="w-full h-full p-2 flex items-center justify-center">
-              <div>
-                <span
-                  class="bg-[#f7d51d] shadow-[0_0.5em_#f7d51d,0_-0.5em_#f7d51d,0.5em_0_#f7d51d,-0.5em_0_#f7d51d] font-bold text-base block text-center w-[150px] mb-5">
-                  逻 辑
-                </span>
-                <span class="text-xl tracking-wide text-slate-800">
-                  小肝助手会获取你当前的游戏进程，并向该进程发送宏命令，这样就实现了进程间的脚本隔离，从而不影响到其他进程的正常运行。小肝助手不会修改你的游戏数据，也不会修改文件等，它只是在宏脚本的基础上扩展了一些辅助功能。
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:max-w-40% max-md:mb-12">
-            <div class="flex flex-wrap justify-center">
-              <div class="w-[280px] relative rounded-lg overflow-hidden m-3 group">
-                <img
-                  src="/src/assets/images/program/fishing-demonstration.gif"
-                  width="409"
-                  height="222"
-                  alt="fishing"
-                  loading="lazy"
-                  class="w-full h-full flex opacity-60 group-hover:opacity-100 transition-opacity duration-200" />
-                <div
-                  class="w-full h-[40px] leading-[40px] color-white text-center absolute bottom-0 bg-[#333c] group-hover:-bottom-10 transition-all duration-200">
-                  全自动钓鱼
-                </div>
-              </div>
-              <div class="w-[280px] relative rounded-lg overflow-hidden m-3 group">
-                <img
-                  src="/src/assets/images/program/hide-program.gif"
-                  width="409"
-                  height="222"
-                  alt="fishing"
-                  loading="lazy"
-                  class="w-full h-full flex opacity-60 group-hover:opacity-100 transition-opacity duration-200" />
-                <div
-                  class="w-full h-[40px] leading-[40px] color-white text-center absolute bottom-0 bg-[#333c] group-hover:-bottom-10 transition-all duration-200">
-                  隐藏到后台挂机
-                </div>
-              </div>
-              <div class="w-[280px] relative rounded-lg overflow-hidden m-3 group">
-                <img
-                  src="/src/assets/images/program/click-demonstration.gif"
-                  width="409"
-                  height="222"
-                  alt="fishing"
-                  loading="lazy"
-                  class="w-full h-full flex opacity-60 group-hover:opacity-100 transition-opacity duration-200" />
-                <div
-                  class="w-full h-[40px] leading-[40px] color-white text-center absolute bottom-0 bg-[#333c] group-hover:-bottom-10 transition-all duration-200">
-                  鼠标连点
-                </div>
-              </div>
-              <div class="w-[280px] relative rounded-lg overflow-hidden m-3 group">
-                <img
-                  src="/src/assets/images/program/send-message.gif"
-                  width="409"
-                  height="222"
-                  alt="fishing"
-                  loading="lazy"
-                  class="w-full h-full flex opacity-60 group-hover:opacity-100 transition-opacity duration-200" />
-                <div
-                  class="w-full h-[40px] leading-[40px] color-white text-center absolute bottom-0 bg-[#333c] group-hover:-bottom-10 transition-all duration-200">
-                  自动发消息
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="w-[68px] absolute top-18 right-0 hover:scale-110 transition-all duration-200 max-md:hidden cursor-pointer">
+          <img id="face-creeper" src="/src/assets/images/coolie-fear.png" alt="steve" loading="lazy" class="w-full flex" />
         </div>
-        <footer class="w-full pt-12 md:pt-24">
-          <div class="flex flex-col items-center justify-center text-slate-800 max-md:px-12">
-            <span
-              class="bg-[#f7d51d] shadow-[0_0.5em_#f7d51d,0_-0.5em_#f7d51d,0.5em_0_#f7d51d,-0.5em_0_#f7d51d] font-bold text-sm block text-center w-[150px] mb-5">
-              关注 / 反馈
-            </span>
-            <span class="text-lg block"> 欢迎加入我们的企鹅群一起交流</span>
-            <span class="text-lg block"> 当然，如果可以的话最好给我的 GitHub 点一个 Star，这会使我非常高兴！</span>
+      </main>
 
-            <div class="flex items-center flex-wrap mt-1 max-md:justify-center">
-              <a href="https://qm.qq.com/q/VGJh7f7GoO" target="_blank" class="btn-link">
-                <img src="/src/assets/icon/qq.svg" alt="qq" class="mr-1" />
-                <span class="text-slate-800">955907864</span>
-              </a>
-              <a href="https://qm.qq.com/q/ahkpqvgsHS" target="_blank" class="btn-link">
-                <img src="/src/assets/icon/qq.svg" alt="qq" class="mr-1" />
-                <span class="text-slate-800">724761073</span>
-              </a>
-              <a href="https://github.com/iwengx/Minecraft-Lil-liver-helper" target="_blank" class="btn-link">
-                <img src="/src/assets/icon/github.svg" alt="github" class="mr-1" />
-                <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/iwengx/Minecraft-Lil-liver-helper" />
-              </a>
-              <a href="https://github.com/iwengx/Minecraft-Lil-liver-helper/releases" target="_blank" class="btn-link">
-                <img src="/src/assets/icon/github.svg" alt="github" class="mr-1" />
-                <img
-                  alt="GitHub Release"
-                  src="https://img.shields.io/github/v/release/iwengx/Minecraft-Lil-liver-helper?style=social&label=%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97" />
-              </a>
-            </div>
-          </div>
-          <div class="w-full h-[150px] bg-bottom bg-repeat-x bg-[url(/src/assets/images/trans-bottom-darkwool.png)]"></div>
-        </footer>
-      </div>
-      <div class="w-[68px] absolute top-18 right-0 hover:scale-110 transition-all duration-200 max-md:hidden">
-        <img src="/src/assets/images/coolie-fear.png" alt="steve" loading="lazy" class="w-full flex" />
-      </div>
-    </main>
+      <main id="sponsor-main" class="main-container absolute rotate-y-[180deg]">
+        <div
+          class="w-[68px] absolute top-18 left-0 hover:scale-110 transform-rotate-y-[180deg] transition-all duration-200 max-md:hidden cursor-pointer">
+          <img id="back-creeper" src="/src/assets/images/coolie-fear.png" alt="steve" loading="lazy" class="w-full flex" />
+        </div>
+        <!-- 卡片翻转时才添加赞助页面 -->
+      </main>
+    </div>
 
     <script src="/src/scripts/main.js" type="module"></script>
   </body>
