@@ -24,3 +24,9 @@ pnpm install
 ```
 pnpm dev
 ```
+
+## Contributors
+
+<a href="https://github.com/iwengx/wengx.cn-html/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=iwengx/wengx.cn-html" />
+</a>
