@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>小肝助手 - 我的世界</title>
     <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/src/assets/creeper-boom.css" fetchpriority="low" />
     <link rel="stylesheet" href="/src/assets/style.css" />
     <script src="/src/scripts/common.js" type="module"></script>
   </head>
 
   <body class="overflow-hidden bg-cover bg-center bg-no-repeat bg-[url(/src/assets/images/wallhaven-z8vk1w.png)] bg-[#888282]">
-    <div class="w-full h-full relative flex items-center justify-center border-solid border-0 border-transparent md:border-x-48 md:border-y-32 perspective-[5000px]">
+    <div
+      class="w-full h-full relative flex items-center justify-center border-solid border-0 border-transparent md:border-x-48 md:border-y-32 perspective-[5000px]">
       <main id="home-main" class="main-container relative z-10 bg-[url(/src/assets/images/bg-wool-light.png)] bg-cover">
         <div id="wengxcn-wrapper" class="w-full h-full relative overflow-y-auto hide-scrollbar">
           <header
@@ -178,6 +180,9 @@
         <div
           class="w-[68px] absolute top-18 left-0 hover:scale-110 transform-rotate-y-[180deg] transition-all duration-200 max-md:hidden cursor-pointer">
           <img id="back-creeper" src="/src/assets/images/coolie-fear.png" alt="steve" loading="lazy" class="w-full flex" />
+        </div>
+        <div id="creeper-boom" class="creeper-boom-container" style="display: none">
+          <img src="/src/assets/images/creeper-boom.png" alt="creeper-boom" />
         </div>
         <!-- 卡片翻转时才添加赞助页面 -->
       </main>

@@ -1,9 +1,9 @@
 const sponsors = [
   {
-    nickname: '203****392',
-    datetime: '2023-05-22 12:44:05',
+    nickname: '楠楠',
+    datetime: '2025-02-12 09:52:50',
     avatar: '/sponsors/nannan.jpg',
-    money: 5,
+    money: 7.48,
   },
   {
     nickname: '超',

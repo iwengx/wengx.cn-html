@@ -1,0 +1,61 @@
+.creeper-boom-container {
+  --image-width: 100px;
+  width: var(--image-width);
+  height: 140px;
+  position: absolute;
+  left: calc(50% - var(--image-width) / 2);
+  opacity: 0;
+  animation: riseUp 1s ease-in forwards, creeperEffect 3s 1s steps(8) forwards;
+  transform-origin: bottom;
+}
+
+@keyframes riseUp {
+  0% {
+    bottom: -140px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes creeperEffect {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  12.5% {
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
+  25% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  37.5% {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  62.5% {
+    transform: scale(1.3);
+    opacity: 0.5;
+  }
+  75% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  87.5% {
+    transform: scale(1.4);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+    display: none;
+  }
+}
