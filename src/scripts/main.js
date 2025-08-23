@@ -12,7 +12,7 @@ wrapperEl.addEventListener('scroll', (e) => {
 
 /** 软件下载配置 */
 const llhVersion = '2.5.7'
-const downloadLink = `https://gh-proxy.com/https://github.com/iwengx/Minecraft-Lil-liver-helper/releases/download/${llhVersion}/minecraft-lil-liver-helper-v${llhVersion}.exe`
+const downloadLink = `https://github.099899.xyz/Minecraft-Lil-liver-helper/minecraft-lil-liver-helper-v${llhVersion}.exe`
 const downloadEl = document.getElementById('wengxcn-download')
 downloadEl.setAttribute('href', downloadLink)
 
