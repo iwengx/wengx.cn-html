@@ -1,0 +1,331 @@
+body {
+  font-family: 'Courier New', monospace;
+}
+
+.minecraft-wrapper {
+  background: linear-gradient(135deg, #4a7c59 0%, #2d5a3d 50%, #1a3d2a 100%);
+}
+
+.block {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-size: 32px 32px;
+  animation: float 6s ease-in-out infinite;
+  opacity: 0.3;
+}
+
+.dirt-block {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" fill="%238b4513"/><rect x="0" y="0" width="8" height="8" fill="%23a0522d"/><rect x="16" y="8" width="8" height="8" fill="%23a0522d"/><rect x="8" y="16" width="8" height="8" fill="%23a0522d"/><rect x="24" y="24" width="8" height="8" fill="%23a0522d"/></svg>');
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.stone-block {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" fill="%236d6d6d"/><rect x="0" y="0" width="8" height="8" fill="%238d8d8d"/><rect x="16" y="8" width="8" height="8" fill="%238d8d8d"/><rect x="8" y="16" width="8" height="8" fill="%238d8d8d"/><rect x="24" y="24" width="8" height="8" fill="%238d8d8d"/></svg>');
+  top: 20%;
+  right: 15%;
+  animation-delay: 1s;
+}
+
+.grass-block {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" fill="%23567d46"/><rect x="0" y="0" width="32" height="8" fill="%237cb342"/><rect x="0" y="0" width="8" height="8" fill="%238bc34a"/><rect x="16" y="0" width="8" height="8" fill="%238bc34a"/><rect x="8" y="8" width="8" height="8" fill="%238bc34a"/><rect x="24" y="8" width="8" height="8" fill="%238bc34a"/></svg>');
+  top: 30%;
+  left: 20%;
+  animation-delay: 2s;
+}
+
+.wood-block {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" fill="%238b4513"/><rect x="0" y="0" width="32" height="4" fill="%23a0522d"/><rect x="0" y="8" width="32" height="4" fill="%23a0522d"/><rect x="0" y="16" width="32" height="4" fill="%23a0522d"/><rect x="0" y="24" width="32" height="4" fill="%23a0522d"/></svg>');
+  top: 40%;
+  right: 25%;
+  animation-delay: 3s;
+}
+
+.coal-block {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" fill="%23333"/><rect x="0" y="0" width="8" height="8" fill="%23555"/><rect x="16" y="8" width="8" height="8" fill="%23555"/><rect x="8" y="16" width="8" height="8" fill="%23555"/><rect x="24" y="24" width="8" height="8" fill="%23555"/></svg>');
+  top: 50%;
+  left: 30%;
+  animation-delay: 4s;
+}
+
+.iron-block {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" fill="%23a0a0a0"/><rect x="0" y="0" width="8" height="8" fill="%23c0c0c0"/><rect x="16" y="8" width="8" height="8" fill="%23c0c0c0"/><rect x="8" y="16" width="8" height="8" fill="%23c0c0c0"/><rect x="24" y="24" width="8" height="8" fill="%23c0c0c0"/></svg>');
+  top: 62%;
+  right: 19%;
+  animation-delay: 5s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+.minecraft-title h1 {
+  font-size: 4rem;
+  text-shadow: 3px 3px 0 #000, 6px 6px 0 #333, 9px 9px 0 #666;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 0 #000;
+  opacity: 0.9;
+}
+
+.download-card {
+  background: rgba(0, 0, 0, 0.8);
+  border: 4px solid #555;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.card-header {
+  border-bottom: 2px solid #555;
+}
+
+.minecraft-icon {
+  font-size: 2rem;
+  margin-right: 15px;
+}
+
+.card-header h2 {
+  font-size: 2rem;
+  text-shadow: 2px 2px 0 #000;
+  flex-grow: 1;
+}
+
+.status-dot {
+  background: #ffd700;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.status-text {
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+}
+
+.link-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.link-item {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #555;
+  border-radius: 6px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.link-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #ffd700;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+.link-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.link-number {
+  background: #ffd700;
+  color: #000;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  min-width: 30px;
+  text-align: center;
+}
+
+.link-title {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.expiry {
+  color: #ff6b6b;
+  font-size: 0.8rem;
+  margin-left: auto;
+}
+
+.link-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.minecraft-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(45deg, #4caf50, #45a049);
+  padding: 12px 24px;
+  border: 2px solid #2e7d32;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #000;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.minecraft-button:hover {
+  background: linear-gradient(45deg, #45a049, #4caf50);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.button-text {
+  font-size: 1rem;
+}
+
+.button-icon {
+  font-size: 1.2rem;
+}
+
+.link-url {
+  color: #ccc;
+  font-size: 0.9rem;
+  font-family: 'Courier New', monospace;
+}
+
+.link-status {
+  display: flex;
+  gap: 20px;
+  font-size: 0.8rem;
+}
+
+.latency,
+.status {
+  color: #ccc;
+}
+
+.status.good {
+  color: #4caf50;
+}
+.status.average {
+  color: #ff9800;
+}
+.status.poor {
+  color: #f44336;
+}
+.status.unable {
+  color: #9e9e9e;
+}
+
+.minecraft-back-button {
+  background: linear-gradient(45deg, #2196f3, #1976d2);
+  padding: 15px 30px;
+  border: 3px solid #0d47a1;
+  text-shadow: 1px 1px 0 #000;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.minecraft-back-button:hover {
+  background: linear-gradient(45deg, #1976d2, #2196f3);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .main-container {
+    padding: 20px 10px;
+  }
+
+  .minecraft-title h1 {
+    font-size: 2.5rem;
+  }
+
+  .download-card {
+    padding: 20px;
+  }
+
+  .card-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .link-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .left-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .minecraft-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .link-status {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .minecraft-title h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .download-card {
+    padding: 15px;
+  }
+
+  .link-item {
+    padding: 15px;
+  }
+
+  .link-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .expiry {
+    margin-left: 0;
+  }
+}

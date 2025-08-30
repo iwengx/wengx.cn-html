@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>小肝助手 - 下载</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/src/assets/style.css" />
+    <link rel="stylesheet" href="/src/assets/download.css" />
+    <script src="/src/scripts/common.js" type="module"></script>
+  </head>
+  <body class="overflow-x-hidden select-none">
+    <div class="minecraft-wrapper relative min-h-screen overflow-hidden">
+      <div class="absolute top-0 left-0 w-full h-full z-2 pointer-events-none">
+        <div class="block dirt-block"></div>
+        <div class="block stone-block"></div>
+        <div class="block grass-block"></div>
+        <div class="block wood-block"></div>
+        <div class="block coal-block"></div>
+        <div class="block iron-block"></div>
+      </div>
+
+      <div class="relative z-10 px-5 py-10 max-w-7xl mx-auto">
+        <div class="text-center mb-10">
+          <div class="minecraft-title color-white font-bold mb-[10px]">
+            <h1>小肝助手</h1>
+          </div>
+          <p class="subtitle color-white">选择最佳下载链接</p>
+        </div>
+
+        <div class="flex justify-center mb-10">
+          <div class="download-card w-full max-w-3xl p-8 rounded-lg">
+            <div class="card-header flex items-center justify-between mb-7 pb-5">
+              <div class="minecraft-icon">⛏️</div>
+              <h2 class="color-white">下载地址</h2>
+              <div class="flex items-center gap-[10px]">
+                <span class="status-dot w-3 h-3 rounded-full"></span>
+                <span class="status-text">检测中...</span>
+              </div>
+            </div>
+
+            <div id="download-links">
+              <!-- 动态生成下载卡片元素 -->
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center">
+          <button class="minecraft-back-button flex items-center color-white rounded-lg font-bold cursor-pointer" onclick="top.goBack()">
+            <span class="button-text">返回首页</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="/src/scripts/download.js" type="module"></script>
+  </body>
+</html>

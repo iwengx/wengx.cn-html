@@ -10,12 +10,6 @@ wrapperEl.addEventListener('scroll', (e) => {
   }
 })
 
-/** 软件下载配置 */
-const llhVersion = '2.5.7'
-const downloadLink = `https://github.099899.xyz/Minecraft-Lil-liver-helper/minecraft-lil-liver-helper-v${llhVersion}.exe`
-const downloadEl = document.getElementById('wengxcn-download')
-downloadEl.setAttribute('href', downloadLink)
-
 /** 卡片翻转 */
 const faceCreeper = document.querySelector('#face-creeper')
 const backCreeper = document.querySelector('#back-creeper')
@@ -84,3 +78,70 @@ backCreeper.addEventListener('click', () => {
   sponsorMain.style.transform = ''
   sponsorMain.style.zIndex = ''
 })
+
+/** 立刻下载 */
+const expandBtn = document.getElementById('expandBtn')
+expandBtn.addEventListener('click', function (e) {
+  e.preventDefault() // 阻止默认跳转行为
+
+  // 获取鼠标点击位置
+  const mouseX = e.clientX
+  const mouseY = e.clientY
+
+  // 计算需要的圆形半径（确保能覆盖整个屏幕）
+  const maxDistance = Math.max(
+    Math.sqrt(mouseX * mouseX + mouseY * mouseY),
+    Math.sqrt((window.innerWidth - mouseX) * (window.innerWidth - mouseX) + mouseY * mouseY),
+    Math.sqrt(mouseX * mouseX + (window.innerHeight - mouseY) * (window.innerHeight - mouseY)),
+    Math.sqrt((window.innerWidth - mouseX) * (window.innerWidth - mouseX) + (window.innerHeight - mouseY) * (window.innerHeight - mouseY))
+  )
+
+  const radius = maxDistance * 2
+
+  // 创建圆形覆盖层
+  const circleOverlay = document.createElement('div')
+  circleOverlay.className = 'circle-overlay'
+  circleOverlay.style.width = radius + 'px'
+  circleOverlay.style.height = radius + 'px'
+  circleOverlay.style.left = mouseX - radius / 2 + 'px'
+  circleOverlay.style.top = mouseY - radius / 2 + 'px'
+
+  document.body.appendChild(circleOverlay)
+
+  // 触发扩展动画
+  setTimeout(() => {
+    circleOverlay.classList.add('expand')
+  }, 10)
+
+  // 创建新内容
+  const newContent = document.createElement('div')
+  newContent.className = 'new-content'
+  newContent.innerHTML = `<iframe src="./download.html" class="w-full h-full" frameborder="0" border="0"></iframe>`
+
+  document.body.appendChild(newContent)
+
+  // 显示新内容
+  setTimeout(() => {
+    newContent.classList.add('show')
+  }, 400)
+})
+
+// 返回首页功能
+window.goBack = function () {
+  const circleOverlay = document.querySelector('.circle-overlay')
+  const newContent = document.querySelector('.new-content')
+
+  if (newContent) {
+    newContent.classList.remove('show')
+    setTimeout(() => {
+      newContent.remove()
+    }, 300)
+  }
+
+  if (circleOverlay) {
+    circleOverlay.classList.remove('expand')
+    setTimeout(() => {
+      circleOverlay.remove()
+    }, 800)
+  }
+}
