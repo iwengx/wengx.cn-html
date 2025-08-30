@@ -77,25 +77,16 @@ const downloadLinks = [
   {
     url: 'https://github.099899.xyz/Minecraft-Lil-liver-helper/minecraft-lil-liver-helper-v2.5.7.exe',
     title: '主下载源',
-    description: 'github.099899.xyz',
     deadline: null,
   },
   {
-    url: 'https://github.gmaa.me/Minecraft-Lil-liver-helper/minecraft-lil-liver-helper-v2.5.7.exe',
-    title: '备用源A',
-    description: 'github.gmaa.me',
-    deadline: '2026/02/01',
-  },
-  {
     url: 'https://github-6ej.pages.dev/Minecraft-Lil-liver-helper/minecraft-lil-liver-helper-v2.5.7.exe',
-    title: '备用源B',
-    description: 'github-6ej.pages.dev',
+    title: '备用源A',
     deadline: null,
   },
   {
     url: 'https://github.com/iwengx/Minecraft-Lil-liver-helper/releases/download/2.5.7/minecraft-lil-liver-helper-v2.5.7.exe',
     title: 'GitHub Releases',
-    description: 'github.com',
     deadline: null,
   },
 ]
@@ -119,7 +110,6 @@ function initDownloadCards() {
             <span class="button-text">下载</span>
             <span class="button-icon">⬇️</span>
           </a>
-          <div class="link-url">${item.description}</div>
         </div>
         <div class="link-status">
           <span class="latency"></span>
@@ -140,13 +130,20 @@ function checkAllLinks() {
     .forEach((link, index) => {
       checkPromises.push(checkLatency(link, index))
     })
-  return Promise.all(checkPromises)
+
+  const promiseAll = Promise.all(checkPromises)
+  promiseAll
+    .then(() => {
+      updateGlobalStatus()
+    })
+    .catch(() => {})
+
+  return promiseAll
 }
 
 // 页面加载完成后的初始化
 window.onload = async () => {
   await checkAllLinks()
-  setTimeout(updateGlobalStatus, 1000)
 
   // 添加页面加载动画
   document.body.style.opacity = '0'
