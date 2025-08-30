@@ -27,6 +27,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         programhome: resolve(__dirname, 'programhome.html'),
         support: resolve(__dirname, 'support.html'),
+        download: resolve(__dirname, 'download.html'),
       },
     },
   },
