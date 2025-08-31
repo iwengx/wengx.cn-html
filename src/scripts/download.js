@@ -75,14 +75,19 @@ function updateGlobalStatus() {
 
 const downloadLinks = [
   {
-    url: 'https://github.099899.xyz/Minecraft-Lil-liver-helper/minecraft-lil-liver-helper-v2.5.7.exe',
+    url: 'https://wengx.099899.xyz/Minecraft-Lil-liver-helper/minecraft-lil-liver-helper-v2.5.7.exe',
     title: '主下载源',
     deadline: null,
   },
   {
-    url: 'https://github-6ej.pages.dev/Minecraft-Lil-liver-helper/minecraft-lil-liver-helper-v2.5.7.exe',
+    url: 'https://wengx.ping.cloudns.club/Minecraft-Lil-liver-helper/minecraft-lil-liver-helper-v2.5.7.exe',
     title: '备用源A',
     deadline: null,
+  },
+  {
+    url: 'https://wengx.ping.cloudns.pro/Minecraft-Lil-liver-helper/minecraft-lil-liver-helper-v2.5.7.exe',
+    title: '备用源B',
+    deadline: '开小黄云',
   },
   {
     url: 'https://github.com/iwengx/Minecraft-Lil-liver-helper/releases/download/2.5.7/minecraft-lil-liver-helper-v2.5.7.exe',
@@ -99,7 +104,7 @@ function initDownloadCards() {
       <div class="link-header">
         <span class="link-number">${(index + 1).toString().padStart(2, '0')}</span>
         <span class="link-title">${item.title}</span>
-        ${item.deadline ? `<span class="expiry">（到期：${item.deadline}）</span>` : ''}
+        ${item.deadline ? `<span class="expiry">（${item.deadline}）</span>` : ''}
       </div>
       <div class="link-content">
         <div class="left-section">
