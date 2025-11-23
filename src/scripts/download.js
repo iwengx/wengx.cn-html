@@ -75,22 +75,22 @@ function updateGlobalStatus() {
 
 const downloadLinks = [
   {
-    url: 'https://wengx.099899.xyz/Minecraft-Lil-liver-helper/minecraft-lil-liver-helper-v2.5.7.exe',
+    url: 'https://wengx.099899.xyz/Minecraft-Lil-liver-helper/minecraft-lil-liver-helper-v2.6.0.exe',
     title: '主下载源',
     deadline: null,
   },
   {
-    url: 'https://wengx.ping.cloudns.club/Minecraft-Lil-liver-helper/minecraft-lil-liver-helper-v2.5.7.exe',
+    url: 'https://wengx.ping.cloudns.club/Minecraft-Lil-liver-helper/minecraft-lil-liver-helper-v2.6.0.exe',
     title: '备用源A',
     deadline: null,
   },
   {
-    url: 'https://wengx.ping.cloudns.pro/Minecraft-Lil-liver-helper/minecraft-lil-liver-helper-v2.5.7.exe',
+    url: 'https://wengx.ping.cloudns.pro/Minecraft-Lil-liver-helper/minecraft-lil-liver-helper-v2.6.0.exe',
     title: '备用源B',
     deadline: '开小黄云',
   },
   {
-    url: 'https://github.com/iwengx/Minecraft-Lil-liver-helper/releases/download/2.5.7/minecraft-lil-liver-helper-v2.5.7.exe',
+    url: 'https://github.com/iwengx/Minecraft-Lil-liver-helper/releases/download/2.6.0/minecraft-lil-liver-helper-v2.6.0.exe',
     title: 'GitHub Releases',
     deadline: null,
   },
