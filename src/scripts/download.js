@@ -147,15 +147,8 @@ function checkAllLinks() {
 }
 
 // 页面加载完成后的初始化
-window.onload = async () => {
-  await checkAllLinks()
-
-  // 添加页面加载动画
-  document.body.style.opacity = '0'
-  document.body.style.transition = 'opacity 0.5s ease-in-out'
-  setTimeout(() => {
-    document.body.style.opacity = '1'
-  }, 100)
+window.onload = () => {
+  checkAllLinks()
 }
 
 // 页面重新可见时重新检测链接状态

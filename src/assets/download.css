@@ -67,18 +67,6 @@ body {
   }
 }
 
-.minecraft-title h1 {
-  font-size: 4rem;
-  text-shadow: 3px 3px 0 #000, 6px 6px 0 #333, 9px 9px 0 #666;
-  letter-spacing: 2px;
-}
-
-.subtitle {
-  font-size: 1.5rem;
-  text-shadow: 2px 2px 0 #000;
-  opacity: 0.9;
-}
-
 .download-card {
   background: rgba(0, 0, 0, 0.8);
   border: 4px solid #555;
@@ -87,6 +75,35 @@ body {
 
 .card-header {
   border-bottom: 2px solid #555;
+}
+
+.mc-close-btn {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.75);
+  border: 2px solid #555;
+  border-radius: 6px;
+  box-shadow: 0 6px 0 #222, inset 0 0 0 2px rgba(255, 255, 255, 0.06);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.mc-close-btn:hover {
+  border-color: #ffd700;
+  background: rgba(255, 215, 0, 0.12);
+}
+
+.mc-close-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #222, inset 0 0 0 2px rgba(255, 255, 255, 0.06);
+}
+
+.mc-close-btn:focus-visible {
+  outline: none;
+  border-color: #ffd700;
+  box-shadow: 0 6px 0 #222, 0 0 0 3px rgba(255, 215, 0, 0.35), inset 0 0 0 2px rgba(255, 255, 255, 0.06);
 }
 
 .minecraft-icon {
@@ -259,10 +276,6 @@ body {
     padding: 20px 10px;
   }
 
-  .minecraft-title h1 {
-    font-size: 2.5rem;
-  }
-
   .download-card {
     padding: 20px;
   }
@@ -297,14 +310,6 @@ body {
 }
 
 @media (max-width: 480px) {
-  .minecraft-title h1 {
-    font-size: 2rem;
-  }
-
-  .subtitle {
-    font-size: 1.2rem;
-  }
-
   .download-card {
     padding: 15px;
   }

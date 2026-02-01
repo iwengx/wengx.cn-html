@@ -20,16 +20,9 @@
         <div class="block iron-block"></div>
       </div>
 
-      <div class="relative z-10 px-5 py-10 max-w-7xl mx-auto">
-        <div class="text-center mb-10">
-          <div class="minecraft-title color-white font-bold mb-[10px]">
-            <h1>小肝助手</h1>
-          </div>
-          <p class="subtitle color-white">选择最佳下载链接</p>
-        </div>
-
-        <div class="flex justify-center mb-10">
-          <div class="download-card w-full max-w-3xl p-8 rounded-lg">
+      <div class="z-10 px-5 py-10 max-w-7xl mx-auto">
+        <div class="flex justify-center">
+          <div class="download-card relative w-full max-w-3xl p-8 rounded-lg">
             <div class="card-header flex items-center justify-between mb-7 pb-5">
               <div class="minecraft-icon">⛏️</div>
               <h2 class="color-white">下载地址</h2>
@@ -42,13 +35,18 @@
             <div id="download-links">
               <!-- 动态生成下载卡片元素 -->
             </div>
-          </div>
-        </div>
 
-        <div class="flex justify-center">
-          <button class="minecraft-back-button flex items-center color-white rounded-lg font-bold cursor-pointer" onclick="top.goBack()">
-            <span class="button-text">返回首页</span>
-          </button>
+            <div class="absolute -right-15 top-0 flex justify-center">
+              <button class="cursor-pointer mc-close-btn" type="button" aria-label="返回首页" title="返回首页" onclick="top.goBack()">
+                <svg t="1769934405081" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4965" width="14" height="14">
+                  <path
+                    d="M631.429322 513.680525l361.649015 361.873086a85.258643 85.258643 0 1 1-120.717724 120.437636l-361.649016-361.873085-364.113785 364.113785a85.986871 85.986871 0 0 1-121.614005-121.557986l364.113786-364.113786L27.39256 151.247265A85.482713 85.482713 0 1 1 148.110284 30.249453L509.815317 392.122538 876.617943 25.207877a85.986871 85.986871 0 0 1 121.670022 121.557987z"
+                    p-id="4966"
+                    fill="#ffffff"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
