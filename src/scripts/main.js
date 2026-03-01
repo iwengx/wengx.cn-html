@@ -1,3 +1,8 @@
+/** 页面加载完成后移除 preload 类，启用 transition */
+requestAnimationFrame(() => {
+  document.body.classList.remove('preload')
+})
+
 /** 监听滚动事件，当滚动时 logo 旋转 90 度 */
 const wrapperEl = document.getElementById('wengxcn-wrapper')
 const logoEl = document.getElementById('wengxcn-logo')
@@ -68,6 +73,7 @@ faceCreeper.addEventListener('click', () => {
 
       // 爆炸完后显示赞助页面
       sponsorIframe.style.opacity = ''
+      sponsorIframe.contentWindow.postMessage('start-entrance', '*')
     }, 3800)
   }
 })

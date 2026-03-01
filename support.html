@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh">
   <head>
     <meta charset="UTF-8" />
@@ -6,6 +6,33 @@
     <title>小肝助手 - 赞助列表</title>
     <link rel="stylesheet" href="/src/assets/style.css" />
     <script src="/src/scripts/common.js" type="module"></script>
+    <style>
+      /* 入场动画 */
+      .sponsor-card {
+        opacity: 0;
+        transform: translateY(40px) scale(0.8);
+        cursor: default;
+      }
+
+      .sponsor-card.placed {
+        animation: blockPlace 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+      }
+
+      @keyframes blockPlace {
+        0% {
+          opacity: 0;
+          transform: translateY(40px) scale(0.8);
+        }
+        60% {
+          opacity: 1;
+          transform: translateY(-4px) scale(1.05);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -29,7 +56,7 @@
           </div>
         </div>
       </div>
-    </di>
+    </div>
   </body>
 
   <script type="module">
@@ -37,9 +64,9 @@
 
     function createSponsorCard(sponsor) {
       return `
-        <div class="bg-stone-700 border-4 border-solid border-stone-600 p-4 transition-colors duration-200 relative shadow-minecraft-sm">
+        <div class="sponsor-card bg-stone-700 border-4 border-solid border-stone-600 p-4 relative shadow-minecraft-sm">
           <div class="relative mb-3 mx-auto w-16 h-16 border-2 border-stone-500 bg-stone-800 shadow-minecraft-sm bg-white">
-            <img 
+            <img
               class="w-full h-full object-cover image-render-pixel"
               src="${sponsor.avatar}"
               loading="lazy"
@@ -54,13 +81,25 @@
       `
     }
 
-    const populateSponsors = () => {
-      const grid = document.getElementById('sponsors-grid')
-      const sponsorCards = sponsors.map((sponsor) => createSponsorCard(sponsor)).join('')
-      grid.innerHTML = sponsorCards
+    const grid = document.getElementById('sponsors-grid')
+    grid.innerHTML = sponsors.map((sponsor) => createSponsorCard(sponsor)).join('')
+
+    function startEntrance() {
+      const cards = grid.querySelectorAll('.sponsor-card')
+      cards.forEach((card, index) => {
+        setTimeout(() => {
+          card.classList.add('placed')
+        }, index * 80)
+      })
     }
-    document.addEventListener('DOMContentLoaded', () => {
-      populateSponsors()
-    })
+
+    // 在 iframe 中时，等父页面通知再播放
+    if (window.self !== window.top) {
+      window.addEventListener('message', (e) => {
+        if (e.data === 'start-entrance') startEntrance()
+      })
+    } else {
+      startEntrance()
+    }
   </script>
 </html>

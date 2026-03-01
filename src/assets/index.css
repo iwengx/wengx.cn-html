@@ -1,3 +1,8 @@
+.preload,
+.preload * {
+  transition: none !important;
+}
+
 .circle-overlay {
   position: fixed;
   border-radius: 50%;

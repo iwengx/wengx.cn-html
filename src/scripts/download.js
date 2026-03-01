@@ -98,9 +98,9 @@ const downloadLinks = [
 
 // 初始化下载卡片元素
 function initDownloadCards() {
-  const lineksContainer = document.querySelector('#download-links')
+  const linksContainer = document.querySelector('#download-links')
   downloadLinks.forEach((item, index) => {
-    const cartdHTML = `<div class="link-item" id="link${index}">
+    const cardHTML = `<div class="link-item" id="link${index}">
       <div class="link-header">
         <span class="link-number">${(index + 1).toString().padStart(2, '0')}</span>
         <span class="link-title">${item.title}</span>
@@ -122,7 +122,7 @@ function initDownloadCards() {
         </div>
       </div>
     </div>`
-    lineksContainer.insertAdjacentHTML('beforeend', cartdHTML)
+    linksContainer.insertAdjacentHTML('beforeend', cardHTML)
   })
 }
 initDownloadCards()
@@ -130,11 +130,9 @@ initDownloadCards()
 // 检查所有链接的函数
 function checkAllLinks() {
   const checkPromises = []
-  downloadLinks
-    .map((item) => item.url)
-    .forEach((link, index) => {
-      checkPromises.push(checkLatency(link, index))
-    })
+  downloadLinks.forEach((item, index) => {
+    checkPromises.push(checkLatency(item.url, index))
+  })
 
   const promiseAll = Promise.all(checkPromises)
   promiseAll
@@ -147,9 +145,9 @@ function checkAllLinks() {
 }
 
 // 页面加载完成后的初始化
-window.onload = () => {
+window.addEventListener('load', () => {
   checkAllLinks()
-}
+})
 
 // 页面重新可见时重新检测链接状态
 document.addEventListener('visibilitychange', () => {
