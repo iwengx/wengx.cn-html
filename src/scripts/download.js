@@ -99,6 +99,7 @@ const downloadLinks = [
 // 初始化下载卡片元素
 function initDownloadCards() {
   const linksContainer = document.querySelector('#download-links')
+  linksContainer.style.minHeight = `calc(155px * ${downloadLinks.length})`
   downloadLinks.forEach((item, index) => {
     const cardHTML = `<div class="link-item" id="link${index}">
       <div class="link-header">

@@ -4,6 +4,17 @@ import { defineConfig, toEscapedSelector as e } from 'unocss'
 
 export default defineConfig({
   presets: [presetWind3()],
+  theme: {
+    breakpoints: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
+      '3xl': '1792px',
+      '4xl': '2048px',
+    },
+  },
   shortcuts: {
     // 底部的链接按钮
     'btn-link':
@@ -11,7 +22,7 @@ export default defineConfig({
 
     // 首页卡片容器
     'main-container':
-      'w-full h-full md:aspect-video md:max-w-[1680px] md:max-h-[1050px] md:rounded-xl bg-white overflow-hidden shadow-[rgba(0,0,0,0.45)_0px_25px_20px_-20px] backface-hidden transition-transform transition-duration-800',
+      'w-full xl:w-[90%] 2xl:w-[80%] 3xl:w-[75%] 4xl:w-[65%] h-full xl:h-auto xl:aspect-16/10 xl:rounded-xl bg-white overflow-hidden shadow-[rgba(0,0,0,0.45)_0px_25px_20px_-20px] backface-hidden transition-transform transition-duration-800',
   },
   rules: [
     // 隐藏滚动条但保留滚动功能
