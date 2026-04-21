@@ -73,24 +73,27 @@ function updateGlobalStatus() {
   }
 }
 
+const downloadVersion = '2.8.0'
+const downloadFileName = `minecraft-lil-liver-helper-v${downloadVersion}.exe`
+
 const downloadLinks = [
   {
-    url: 'https://wengx.099899.xyz/Minecraft-Lil-liver-helper/minecraft-lil-liver-helper-v2.8.0.exe',
+    url: `https://wengx.099899.xyz/Minecraft-Lil-liver-helper/${downloadFileName}`,
     title: '主下载源',
     deadline: null,
   },
   {
-    url: 'https://wengx.ping.cloudns.club/Minecraft-Lil-liver-helper/minecraft-lil-liver-helper-v2.8.0.exe',
+    url: `https://wengx.ping.cloudns.club/Minecraft-Lil-liver-helper/${downloadFileName}`,
     title: '备用源A',
     deadline: null,
   },
   {
-    url: 'https://wengx.ping.cloudns.pro/Minecraft-Lil-liver-helper/minecraft-lil-liver-helper-v2.8.0.exe',
+    url: `https://wengx.ping.cloudns.pro/Minecraft-Lil-liver-helper/${downloadFileName}`,
     title: '备用源B',
     deadline: '开小黄云',
   },
   {
-    url: 'https://github.com/iwengx/Minecraft-Lil-liver-helper/releases/download/2.7.0/minecraft-lil-liver-helper-v2.8.0.exe',
+    url: `https://github.com/iwengx/Minecraft-Lil-liver-helper/releases/download/${downloadVersion}/${downloadFileName}`,
     title: 'GitHub Releases',
     deadline: null,
   },
