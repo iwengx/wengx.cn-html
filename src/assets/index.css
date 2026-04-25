@@ -43,3 +43,13 @@
   margin-bottom: 30px;
   opacity: 0.9;
 }
+
+body {
+  background-image: url('/src/assets/images/wallhaven-z8vk1w.png');
+}
+
+@supports (background-image: url('test.webp')) {
+  body {
+    background-image: url('/src/assets/images/wallhaven-z8vk1w.webp');
+  }
+}
