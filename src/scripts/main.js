@@ -120,27 +120,27 @@ expandBtn.addEventListener('click', function (e) {
   }, 10)
 
   // 创建新内容
-  const newContent = document.createElement('div')
-  newContent.className = 'new-content'
-  newContent.innerHTML = `<iframe src="./download.html" class="w-full h-full" frameborder="0" border="0"></iframe>`
+  const downloadWrapper = document.createElement('div')
+  downloadWrapper.className = 'download-wrapper'
+  downloadWrapper.innerHTML = `<iframe src="./download.html" class="w-full h-full" frameborder="0" border="0"></iframe>`
 
-  document.body.appendChild(newContent)
+  document.body.appendChild(downloadWrapper)
 
   // 显示新内容
   setTimeout(() => {
-    newContent.classList.add('show')
+    downloadWrapper.classList.add('show')
   }, 400)
 })
 
 // 返回首页功能
 window.goBack = function () {
   const circleOverlay = document.querySelector('.circle-overlay')
-  const newContent = document.querySelector('.new-content')
+  const downloadWrapper = document.querySelector('.download-wrapper')
 
-  if (newContent) {
-    newContent.classList.remove('show')
+  if (downloadWrapper) {
+    downloadWrapper.classList.remove('show')
     setTimeout(() => {
-      newContent.remove()
+      downloadWrapper.remove()
     }, 300)
   }
 
